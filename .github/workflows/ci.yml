@@ -26,7 +26,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        IMAGE_URI=<secrets.AWS_ACCOUNT_ID>.dkr.ecr.${{ vars.MY_REGION }}.amazonaws.com/node-ecs-app
+        IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.MY_REGION }}.amazonaws.com/node-ecs-app
         docker build -t $IMAGE_URI .
         docker push $IMAGE_URI
 
