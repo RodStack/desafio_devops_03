@@ -4,7 +4,7 @@ const PORT = 3000;
 
 app.get('/', (req, res) => {
   res.json({
-    mensaje: 'Hola, estoy desplegando mi primera aplicación',
+    mensaje: 'Hola, estoy desplegando mi primera aplicación ahora desde GitHub Actions',
     fecha: new Date()
   });
 });
