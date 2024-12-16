@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT
+const NODE_ENV = process.env.NODE_ENV
 
 app.get('/', (req, res) => {
   res.json({
-    mensaje: 'Hola, estoy desplegando mi primera aplicación ahora desde GitHub Actions',
+    mensaje: `Hola, estoy desplegando mi primera aplicación ahora desde GitHub Actions utilizando el modo ${NODE_ENV}`,
     fecha: new Date()
   });
 });
